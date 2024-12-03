@@ -1,4 +1,4 @@
-# Omega Store App
+# Omegacure Vendor App
 
 
 
