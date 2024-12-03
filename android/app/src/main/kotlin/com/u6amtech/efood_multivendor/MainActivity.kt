@@ -1,4 +1,4 @@
-package com.devetechno.masterstore
+package com.omegacuremart.omegastore
 
 import io.flutter.embedding.android.FlutterActivity
 
