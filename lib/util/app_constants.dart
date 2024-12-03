@@ -2,7 +2,7 @@ import 'package:sixam_mart_store/features/language/domain/models/language_model.
 import 'package:sixam_mart_store/util/images.dart';
 
 class AppConstants {
-  static const String appName = 'Devetechno Store';
+  static const String appName = 'Omega Store';
   static const double appVersion = 2.10;
 
   ///Flutter SDK: 3.24.3

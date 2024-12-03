@@ -27,7 +27,7 @@
         </queries>
 
         <application
-            android:label="Devetechno Store"
+            android:label="Omega Store"
             android:name="${applicationName}"
             android:requestLegacyExternalStorage="true"
             android:usesCleartextTraffic="true"

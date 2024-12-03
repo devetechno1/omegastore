@@ -1,4 +1,4 @@
-# Devetechno Store App
+# Omega Store App
 
 
 
