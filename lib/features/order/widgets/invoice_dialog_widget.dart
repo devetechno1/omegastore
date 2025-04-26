@@ -80,22 +80,20 @@ class InvoiceDialogWidget extends StatelessWidget {
                 Text(store.email!, style: robotoRegular.copyWith(fontSize: fontSize)),
                 const SizedBox(height: 10),
 
-                Row(children: [
-                  Text('${'order_id'.tr}:', style: robotoRegular.copyWith(fontSize: fontSize)),
-                  const SizedBox(width: 2),
-                  Expanded(child: Text(order!.id.toString(), style: robotoMedium.copyWith(fontSize: fontSize))),
-                  Text(DateConverterHelper.dateTimeStringToMonthAndTime(order!.createdAt!), style: robotoRegular.copyWith(fontSize: fontSize - 2), textAlign: TextAlign.end,),
-                ]),
+                // Row(children: [
+                //   Text('${'order_id'.tr}:', style: robotoRegular.copyWith(fontSize: fontSize)),
+                //   const SizedBox(width: 2),
+                //   Expanded(child: Text(order!.id.toString(), style: robotoMedium.copyWith(fontSize: fontSize))),
+                //   Text(DateConverterHelper.dateTimeStringToMonthAndTime(order!.createdAt!), style: robotoRegular.copyWith(fontSize: fontSize - 2), textAlign: TextAlign.end,),
+                // ]),
+                PriceWidget(title: '${'order_id'.tr}:', value: "${order!.id.toString()} ${DateConverterHelper.dateTimeStringToMonthAndTime(order!.createdAt!)}", fontSize: fontSize),
+
                 order!.scheduled == 1 ? Text(
                   '${'scheduled_order_time'.tr} ${DateConverterHelper.dateTimeStringToDateTime(order!.scheduleAt!)}',
                   style: robotoRegular.copyWith(fontSize: fontSize),
                 ) : const SizedBox(),
                 const SizedBox(height: 5),
-
-                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text(order!.orderType!.tr, style: robotoRegular.copyWith(fontSize: fontSize)),
-                  Text(order!.paymentMethod!.tr, style: robotoRegular.copyWith(fontSize: fontSize)),
-                ]),
+                PriceWidget(title: order!.orderType!.tr, value: order!.paymentMethod!.tr, fontSize: fontSize),
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 8),
                   child: DottedDivider(height: 1, dashWidth: 4, dashHeight: 1),
